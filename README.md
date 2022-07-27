@@ -1,7 +1,7 @@
 Usage: 
 
-1. get the encoded json
-2. run the script
+1. run the script
+2. get the encoded json
 3. paste it
 4. modify the file as you wish
 5. save the file and quit it
