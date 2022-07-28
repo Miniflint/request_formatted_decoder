@@ -1,3 +1,4 @@
+from random import randint
 import urllib.parse
 import subprocess
 import json
@@ -6,6 +7,27 @@ import json
 # author: Miniflint
 # made 28.07.2022
 ###################################
+
+ASCII_BLOODY= """
+
+ ███▄ ▄███▓ ██▓ ███▄    █  ██▓  █████▒██▓     ██▓ ███▄    █ ▄▄▄█████▓
+▓██▒▀█▀ ██▒▓██▒ ██ ▀█   █ ▓██▒▓██   ▒▓██▒    ▓██▒ ██ ▀█   █ ▓  ██▒ ▓▒
+▓██    ▓██░▒██▒▓██  ▀█ ██▒▒██▒▒████ ░▒██░    ▒██▒▓██  ▀█ ██▒▒ ▓██░ ▒░
+▒██    ▒██ ░██░▓██▒  ▐▌██▒░██░░▓█▒  ░▒██░    ░██░▓██▒  ▐▌██▒░ ▓██▓ ░ 
+▒██▒   ░██▒░██░▒██░   ▓██░░██░░▒█░   ░██████▒░██░▒██░   ▓██░  ▒██▒ ░ 
+░ ▒░   ░  ░░▓  ░ ▒░   ▒ ▒ ░▓   ▒ ░   ░ ▒░▓  ░░▓  ░ ▒░   ▒ ▒   ▒ ░░   
+░  ░      ░ ▒ ░░ ░░   ░ ▒░ ▒ ░ ░     ░ ░ ▒  ░ ▒ ░░ ░░   ░ ▒░    ░    
+░      ░    ▒ ░   ░   ░ ░  ▒ ░ ░ ░     ░ ░    ▒ ░   ░   ░ ░   ░      
+       ░    ░           ░  ░             ░  ░ ░           ░          
+
+"""
+
+ASCII_SMALL = """
+    __  __ _      _  __ _ _     _   
+   |  \/  (_)_ _ (_)/ _| (_)_ _| |_ 
+   | |\/| | | ' \| |  _| | | ' |  _|
+   |_|  |_|_|_||_|_|_| |_|_|_||_\__|
+"""
 
 FILE_PATH = "test_json.txt"
 STR_REPLACE = "signed_body=SIGNATURE."
@@ -57,7 +79,14 @@ def recode_url_handling():
 	write_file(newstr)
 	open_notepad()
 
+def print_ascii():
+	if randint(0, 1):
+		print(ASCII_BLOODY)
+	else:
+		print(ASCII_SMALL)
+
 def main():
+	print_ascii()
 	url = input("Enter your coded string here: ")
 	decode_url_handling(url)
 	recode_url_handling()
