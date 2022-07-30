@@ -77,7 +77,7 @@ def recode_url_handling():
 		string = de_intent_url()
 	except json.decoder.JSONDecodeError:
 		print("\n\nCould not Decode the json\nWrong format\n\n")
-		exit()
+		input()
 	recoded = encode_url(string)
 	newstr = f"{STR_REPLACE}{recoded}"
 	write_file(newstr)
